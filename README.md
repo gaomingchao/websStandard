@@ -12,7 +12,10 @@
 ###### 在页面渲染的过程中，新的CSS可能导致元素的样式重新计算和绘制，页面闪烁。
 ##### [建议] 引入CSS和JavaScript时无须指明type属性。
 ###### `text/css`和`text/javascript`是type的默认值。
-```ruby
-  def add(a, b)
-    return a + b
-  end
+```<script src="//cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css"></script>```
+#### 图片
+##### [建议] 避免为img添加不必要的title属性。
+###### 多余的title影响看图体验，并且增加了页面尺寸。
+##### [建议] 为重要图片添加alt属性。
+###### 可以提高图片加载失败时的用户体验。
+##### [建议] 添加width和height属性，以避免页面抖动。
