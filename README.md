@@ -34,15 +34,15 @@
 ##### [建议]如果是0开始的小数，前面的0可以省略不写 如：`opacity:.5;`。
 ##### [建议]不要在url()里对引用资源加引号 如：`background-image: url(sprites.png);`。
 ##### [建议]多组选择器之间需换行。
-##### [建议]在不考虑低版本浏览器兼容的情况下，避免无意义的空标签出现，用::after和::before代替；
-##### 尽量避免使用class和标签名组合使用；
-###### 不要这样 `div.nav`;
 ```
 h1,
 h2,
 h3 {
 }
 ```
+##### [建议]在不考虑低版本浏览器兼容的情况下，避免无意义的空标签出现，用::after和::before代替；
+##### [建议]尽量避免使用class和标签名组合使用；
+###### 不要这样 `div.nav`;
 ##### CSS书写顺序；
 1. 位置属性(position, top, right, z-index, display, float等)
 2. 盒模型(width, height, padding, margin,border)
