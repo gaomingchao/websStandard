@@ -22,21 +22,56 @@
 
 # CSS 部分
 ##### [强制]使用link的方式调用外部样式。
-##### [强制] 使用4个空格做为一个缩进层级，不允许使用2个空格 或tab字符。
+##### [强制]使用4个空格做为一个缩进层级，不允许使用2个空格 或tab字符。
 ##### [强制]选择器与{之间必须包含空格。
 ``` 
 .selector {
 } 
 ```
 ##### [强制]属性名与之后的:之间不允许包含空格，:与属性值之间必须包含空格。如：`margin: 0;`
-##### [强制]多组选择器之间需换行。
+##### [强制]无继承关系时，使用缩写 如：`margin:10px 20px;`。
+##### [强制]如果属性值为0，则不要为0加单位。
+##### [建议]如果是0开始的小数，前面的0可以省略不写 如：`opacity:.5;`。
+##### [建议]不要在url()里对引用资源加引号 如：`background-image: url(sprites.png);`。
+##### [建议]多组选择器之间需换行。
+##### [建议]在不考虑低版本浏览器兼容的情况下，避免无意义的空标签出现，用::after和::before代替；
+##### 尽量避免使用class和标签名组合使用；
+###### 不要这样 `div.nav`;
 ```
 h1,
 h2,
 h3 {
 }
 ```
-##### [强制]如果属性值为0，则不要为0加单位。
-##### [强制]如果是0开始的小数，前面的0可以省略不写 如：`opacity:.5;`。
-##### [强制]不要在url()里对引用资源加引号 如：`background-image: url(sprites.png);`。
+##### CSS书写顺序；
+1. 位置属性(position, top, right, z-index, display, float等)
+2. 盒模型(width, height, padding, margin,border)
+3. 文字系列(font, line-height, letter-spacing, color- text-align等)
+4. 背景(background等)
+5. 其他(animation, transition等)
+
+# class类名命名规则
+##### 简单模块：在子孙模块数量可预测的情况下，继承祖先模块命名的前缀，用“-”分割（不要用下划线“_”）；
+```
+<div class="slider">
+    <ul class="slider-list">
+        <li class="slider-item"></li>
+    </ul>
+</div>
+```
+##### 复杂模块：当子孙模块过多且无法预估的时候，采用“祖先+父”作为命名前缀；
+```
+<div class="slider">
+     <ul class="slider-list">
+         <li class="slider-item">
+             <div class="slider-item-left">
+                  <span class="slider-left-tips"></span>
+             </div> 
+         </li>
+     </ul>
+</div>
+```
+##### 全站公共模块以 mod- 开头；
+##### 页面公共模块以 xx-mod- 开头 （xx页面名字）；
+##### 命名用英文，较长的使用缩写;
 
